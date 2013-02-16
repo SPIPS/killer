@@ -8,7 +8,7 @@
     <meta name="author" content="SPIPS Polytech Paris-Sud">
 
     <!-- Le styles -->
-    <link href="<?php echo base_url(); ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -42,11 +42,11 @@
       }
 
     </style>
-    <link href="<?php echo base_url(); ?>/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="<?php echo base_url(); ?>/js/html5shiv.js"></script>
+      <script src="<?php echo base_url(); ?>js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
@@ -76,19 +76,19 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php echo base_url(); ?>/js/jquery.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-transition.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-alert.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-modal.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-dropdown.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-tab.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-tooltip.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-popover.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-button.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-collapse.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-carousel.js"></script>
-    <script src="<?php echo base_url(); ?>/js/bootstrap-typeahead.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-transition.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-alert.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-modal.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-dropdown.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-scrollspy.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-tab.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-tooltip.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-popover.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-button.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-collapse.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-carousel.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
