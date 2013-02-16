@@ -61,6 +61,17 @@
 
     <div class="container">
 
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+          <li><a href="welcome/rules">Règles</a></li>
+          <li><a href="welcome/staff">L'équipe</a></li>
+          <li><a href="login/inscription">Inscription</a></li>
+          <li><a href="login/index">Connexion</a></li>
+        </ul>
+        <h3 class="muted">KILL€R  -by SPIPS</h3>
+      </div>
+
       <form class="form-signin" method="post" action="#" enctype="multipart/form-data">
         <h2 class="form-signin-heading">Welcome, jeune aventurier...</h2>
         <input type="text" class="input-block-level" placeholder="votre nom" name="nom">
@@ -74,6 +85,7 @@
         <label>Choisissez une <strong>phrase de confirmation</strong> à communiquer après votre meurtre :</label>
         <input type="text" class="input-block-level" placeholder="phrase de confirmation" name="passphrase">
         <button class="btn btn-large btn-primary" type="submit">Let's go (to the mall)</button>
+        <a class="btn btn-small btn-info" href="login/index">Déjà inscris ?</a>
       </form>
 
     </div> <!-- /container -->

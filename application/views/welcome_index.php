@@ -67,11 +67,11 @@
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="index.php/welcome/rules">Règles</a></li>
-          <li><a href="index.php/welcome/staff">L'équipe</a></li>
-          <li><a href="index.php/login/index">Inscription</a></li>
-          <li><a href="index.php/login/inscription">Connexion</a></li>
+          <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+          <li><a href="welcome/rules">Règles</a></li>
+          <li><a href="welcome/staff">L'équipe</a></li>
+          <li><a href="login/inscription">Inscription</a></li>
+          <li><a href="login/index">Connexion</a></li>
         </ul>
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
@@ -79,9 +79,9 @@
       <hr>
 
       <div class="jumbotron">
-        <h1>Super awesome marketing speak!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>
+        <h1>Killer - la nouvelle attraction à PoPS!</h1>
+        <p class="lead">Durant la semaine associative, le bureau du SPIPS organise une partie de <strong>Killer</strong> grandeur nature. Divertissements et gros lots pour les gagnants à prévoir !</p>
+        <a class="btn btn-large btn-success" href="login/inscription">Participez maintenant !</a>
       </div>
 
       <hr>
