@@ -68,10 +68,10 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
-          <li><a href="welcome/rules">Règles</a></li>
-          <li><a href="welcome/staff">L'équipe</a></li>
-          <li><a href="login/inscription">Inscription</a></li>
-          <li><a href="login/index">Connexion</a></li>
+          <li><a href="<?php echo base_url(); ?>welcome/rules">Règles</a></li>
+          <li><a href="<?php echo base_url(); ?>welcome/staff">L'équipe</a></li>
+          <li><a href="<?php echo base_url(); ?>login/inscription">Inscription</a></li>
+          <li><a href="<?php echo base_url(); ?>login/index">Connexion</a></li>
         </ul>
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>

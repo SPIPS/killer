@@ -62,11 +62,11 @@
     <div class="container">
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
-          <li><a href="welcome/rules">Règles</a></li>
-          <li><a href="welcome/staff">L'équipe</a></li>
-          <li><a href="login/inscription">Inscription</a></li>
-          <li><a href="login/index">Connexion</a></li>
+          <li><a href="<?php echo base_url(); ?>">Home</a></li>
+          <li><a href="<?php echo base_url(); ?>welcome/rules">Règles</a></li>
+          <li><a href="<?php echo base_url(); ?>welcome/staff">L'équipe</a></li>
+          <li><a href="<?php echo base_url(); ?>login/inscription">Inscription</a></li>
+          <li class="active"><a href="<?php echo base_url(); ?>login/index">Connexion</a></li>
         </ul>
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
@@ -79,7 +79,7 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>-->
         <button class="btn btn-large btn-primary" type="submit">Let's go (to the mall)</button>
-        <a class="btn btn-small btn-info" href="login/inscription">Pas encore inscris ?</a>
+        <a class="btn btn-small btn-info" href="<?php echo base_url(); ?>login/inscription">Pas encore inscris ?</a>
       </form>
 
     </div> <!-- /container -->
