@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Template &middot; Bootstrap</title>
+    <title>Killer -by SPIPS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="SPIPS Polytech Paris-Sud">
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -68,10 +68,12 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Règles</a></li>
+          <li><a href="#">L'équipe</a></li>
+          <li><a href="#">Inscription</a></li>
+          <li><a href="#">Connexion</a></li>
         </ul>
-        <h3 class="muted">Project name</h3>
+        <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
 
       <hr>
