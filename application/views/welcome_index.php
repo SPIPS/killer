@@ -67,11 +67,11 @@
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Règles</a></li>
-          <li><a href="#">L'équipe</a></li>
-          <li><a href="#">Inscription</a></li>
-          <li><a href="#">Connexion</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="index.php/welcome/rules">Règles</a></li>
+          <li><a href="index.php/welcome/staff">L'équipe</a></li>
+          <li><a href="index.php/login/index">Inscription</a></li>
+          <li><a href="index.php/login/inscription">Connexion</a></li>
         </ul>
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
