@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 	{
 		error_log("entered");
 		var_export($this->input->post());
-		if($this->input->post('email') && $this->input->post('password') && $this->input->post('photo'))
+		if($this->input->post('email') && $this->input->post('password'))
 		{
 			$this->load->model('Mlogin');
 			$u = array();
@@ -51,7 +51,8 @@ class Login extends CI_Controller {
 			$u['prenom'] = htmlentities($this->input->post('prenom'));
 			$u['nom'] = htmlentities($this->input->post('nom'));
 			$u['mot_de_passe'] = htmlentities($this->input->post('mot_de_passe'));
-			$u['photo'] = $this->input->post('photo');
+//			$u['photo'] = $this->input->post('photo');
+			var_export($_FILES);
 			var_export($u);
 			$this->Mlogin->inscription_membre($u);
 
