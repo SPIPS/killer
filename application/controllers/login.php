@@ -36,6 +36,8 @@ class Login extends CI_Controller {
 
 	public function inscription_finish()
 	{
+		error_log("entered");
+		var_export($this->input->post());
 		if($this->input->post('email') && $this->input->post('password') && $this->input->post('photo'))
 		{
 			$this->load->model('Mlogin');
