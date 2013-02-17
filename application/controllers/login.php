@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-	private $rb_email_regex = '/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/';
+	private $rb_email_regex = '/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/';
 
 	/**
 	 * Index Page for this controller.
@@ -42,7 +42,6 @@ class Login extends CI_Controller {
 		{
 			$this->load->model('Mlogin');
 			$u = array();
-			echo $this->rb_email_regex;
 			if(preg_match($this->rb_email_regex, $this->input->post('email'))){
 				$u['email'] = htmlentities($this->input->post('email'));
 			} else {
