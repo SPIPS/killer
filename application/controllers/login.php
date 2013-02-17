@@ -42,6 +42,7 @@ class Login extends CI_Controller {
 		{
 			$this->load->model('Mlogin');
 			$u = array();
+			echo $this->rb_email_regex;
 			if(preg_match($this->rb_email_regex, $this->input->post('email'))){
 				$u['email'] = htmlentities($this->input->post('email'));
 			} else {
