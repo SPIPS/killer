@@ -72,7 +72,7 @@
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
 
-      <form class="form-signin" method="post" action="#" enctype="multipart/form-data">
+      <form class="form-signin" method="post" action="<?php echo base_url(); ?>login/inscription_finish" enctype="multipart/form-data">
         <h2 class="form-signin-heading">Welcome, jeune aventurier...</h2>
         <input type="text" class="input-block-level" placeholder="votre nom" name="nom">
         <input type="text" class="input-block-level" placeholder="adresse e-mail" name="email">
