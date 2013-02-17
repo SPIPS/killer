@@ -78,7 +78,7 @@
         <input type="text" class="input-block-level" placeholder="adresse e-mail" name="email">
         <input type="password" class="input-block-level" placeholder="mot de passe" name="password">
         <input type="hidden" name="MAX_FILE_SIZE" value="2097152">     
-        <input type="file" class="input-block-level" name="fichier" placeholder="une photo de vous (obligatoire!)...">
+        <input type="file" class="input-block-level" name="photo" placeholder="une photo de vous (obligatoire!)...">
         <!--<label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>-->
