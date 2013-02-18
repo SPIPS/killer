@@ -73,7 +73,7 @@
           <li><a href="<?php echo base_url(); ?>login/inscription">Inscription</a></li>
           <li><a href="<?php echo base_url(); ?>login/index">Connexion</a></li>
         </ul>
-        <h3 class="muted">KILL€R  -by SPIPS</h3>
+        <h3 class="muted">KILLER - by SPIPS</h3>
       </div>
 
       <hr>
