@@ -46,9 +46,9 @@ class Login extends CI_Controller {
 			} else {
 				die("email incorrect");
 			}
-			$name = $_FILES["pictures"]["name"];
+			$name = $_FILES["photo"]["name"];
 			$uploads_dir = '/home/romain/www/rbeuque74.fr/others/polytech/spips/killer/img';
-			if(!move_uploaded_file($_FILES["pictures"]["tmp_name"], "$uploads_dir/$name")){
+			if(!move_uploaded_file($_FILES["photo"]["tmp_name"], "$uploads_dir/$name")){
 				die('unable to move file');
 			}
 			$u['password'] = sha1($this->input->post('password')."Bi@tChPlZZZ");
