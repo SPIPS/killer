@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-	private $rb_email_regex = '/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/';
+	private $rb_email_regex = '/^[A-Za-z0-9._-]+@u-psud\.fr$/';
 
 	/**
 	 * Index Page for this controller.
