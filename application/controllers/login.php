@@ -54,7 +54,7 @@ class Login extends CI_Controller {
 			$u['password'] = sha1($this->input->post('password')."Bi@tChPlZZZ");
 			$u['prenom'] = htmlentities($this->input->post('prenom'));
 			$u['nom'] = htmlentities($this->input->post('nom'));
-			$u['mot_de_passe'] = htmlentities($this->input->post('mot_de_passe'));
+			$u['mot_de_passe'] = htmlentities($this->input->post('passphrase'));
 			$u['photo'] = "img/$name";
 			var_export($_FILES);
 			var_export($u);
