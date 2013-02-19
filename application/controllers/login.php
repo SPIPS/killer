@@ -36,10 +36,9 @@ class Login extends CI_Controller {
 
 	public function inscription_finish()
 	{
-		error_log("entered");
-		var_export($this->input->post());
-		if($this->input->post('email') && $this->input->post('password'))
-		{
+		if ($_FILES['photo'] && is_uploaded_file($_FILES['photo']['tmp_name']) && $_FILES["photo"]["error"] == UPLOAD_ERR_OK &&
+				$this->input->post('email') && $this->input->post('password')) {
+			var_export($this->input->post());
 			$this->load->model('Mlogin');
 			$u = array();
 			if(preg_match($this->rb_email_regex, $this->input->post('email'))){
@@ -47,67 +46,70 @@ class Login extends CI_Controller {
 			} else {
 				die("email incorrect");
 			}
+			$name = $_FILES["pictures"]["name"];
+			$uploads_dir = '/home/romain/www/rbeuque74.fr/others/polytech/spips/killer/img';
+			if(!move_uploaded_file($_FILES["pictures"]["tmp_name"], "$uploads_dir/$name")){
+				die('unable to move file');
+			}
 			$u['password'] = sha1($this->input->post('password')."Bi@tChPlZZZ");
 			$u['prenom'] = htmlentities($this->input->post('prenom'));
 			$u['nom'] = htmlentities($this->input->post('nom'));
 			$u['mot_de_passe'] = htmlentities($this->input->post('mot_de_passe'));
-//			$u['photo'] = $this->input->post('photo');
+			$u['photo'] = "$uploads_dir/$name";
 			var_export($_FILES);
 			var_export($u);
 			$this->Mlogin->inscription_membre($u);
-
 		}
-
 	}
 
-    public function login_finish()
-    {
-        if($this->input->post('login') && $this->input->post('password'))
-        {
-            $this->load->model("Mlogin");
-            $login = $this->input->post('login');
-            $password = $this->input->post('password');
-            $password = $password . "rbeuqueisthebest!";
-            $password = sha1($password);
-                if($this->Mlobby->newPlayerRegistered($login, $password, $this->session->userdata('session_id')))
-                {
-                    $res = $this->Mlobby->getUserInfo($this->session->userdata('session_id'));
-                    if($res){
-                        $cookie = array(
-                            'name'   => 'ci_rb_membre',
-                            'value'  => $res["cookie"],
-                            'expire' => '0'
-                        );
-                        $this->input->set_cookie($cookie);
-                        $this->session->set_userdata('user', $res["cookie"]);
-                    }
-                    $this->index();
-                }
-                else
-                {
-                    $data["erreur"] = "La procÃ©dure d'identification a Ã©chouÃ©e!";
-                    $this->load->view("lobby/lobby_erreur.php", $data);
-                }
-            /*else
-            {
-                if($this->Mlobby->checkAvailability($login))
-                {
-                    $this->Mlobby->newPlayerAnonymous($login, $perso, $this->session->userdata('session_id'));
-                    redirect('/lobby', 'location', 302);
-                }
-                else
-                {
-                    $data["erreur"] = "Le pseudo choisi n'est plus disponible!";
-                    $this->load->view("lobby/lobby_erreur", $data); return;
-                }
-            }*/
-        }
-        else
-        {
-            $data["erreur"] = "L'accÃ¨s Ã  cette page n'est pas autorisÃ© sans passer de paramÃ¨tres!";
-            $this->load->view("lobby/lobby_erreur", $data); return;
-        }
-    }
+	public function login_finish()
+	{
+		if($this->input->post('login') && $this->input->post('password'))
+		{
+			$this->load->model("Mlogin");
+			$login = $this->input->post('login');
+			$password = $this->input->post('password');
+			$password = $password . "rbeuqueisthebest!";
+			$password = sha1($password);
+				if($this->Mlobby->newPlayerRegistered($login, $password, $this->session->userdata('session_id')))
+				{
+					$res = $this->Mlobby->getUserInfo($this->session->userdata('session_id'));
+					if($res){
+						$cookie = array(
+							'name'   => 'ci_rb_membre',
+							'value'  => $res["cookie"],
+							'expire' => '0'
+						);
+						$this->input->set_cookie($cookie);
+						$this->session->set_userdata('user', $res["cookie"]);
+					}
+					$this->index();
+				}
+				else
+				{
+					$data["erreur"] = "La procÃ©dure d'identification a Ã©chouÃ©e!";
+					$this->load->view("lobby/lobby_erreur.php", $data);
+				}
+			/*else
+			{
+				if($this->Mlobby->checkAvailability($login))
+				{
+					$this->Mlobby->newPlayerAnonymous($login, $perso, $this->session->userdata('session_id'));
+					redirect('/lobby', 'location', 302);
+				}
+				else
+				{
+					$data["erreur"] = "Le pseudo choisi n'est plus disponible!";
+					$this->load->view("lobby/lobby_erreur", $data); return;
+				}
+			}*/
+		}
+		else
+		{
+			$data["erreur"] = "L'accÃ¨s Ã  cette page n'est pas autorisÃ© sans passer de paramÃ¨tres!";
+			$this->load->view("lobby/lobby_erreur", $data); return;
+		}
+	}
 	public function inscription()
 	{
 		$this->load->view('login_inscription');
