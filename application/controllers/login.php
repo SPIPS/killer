@@ -55,7 +55,7 @@ class Login extends CI_Controller {
 			$u['prenom'] = htmlentities($this->input->post('prenom'));
 			$u['nom'] = htmlentities($this->input->post('nom'));
 			$u['mot_de_passe'] = htmlentities($this->input->post('mot_de_passe'));
-			$u['photo'] = "$uploads_dir/$name";
+			$u['photo'] = "img/$name";
 			var_export($_FILES);
 			var_export($u);
 			$this->Mlogin->inscription_membre($u);
