@@ -63,6 +63,24 @@ class Login extends CI_Controller {
 			var_export($_FILES);
 			var_export($u);
 			$this->Mlogin->inscription_membre($u);
+		} else {
+			if(!$_FILES['photo']){
+				echo "No photo uploaded";
+			}
+			if(!is_uploaded_file($_FILES['photo']['tmp_name'])){
+				echo "File not uploaded";
+			}
+			if($_FILES["photo"]["error"] != UPLOAD_ERR_OK){
+				echo "File uploaded but with error";
+			}
+			if(!$this->input->post('email')){
+				echo "email not found";
+			}
+			if(!$this->input->post('password'){
+				echo "password not found";
+			}
+			die("error");
+			
 		}
 	}
 
