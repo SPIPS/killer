@@ -76,7 +76,7 @@ class Login extends CI_Controller {
 			if(!$this->input->post('email')){
 				echo "email not found";
 			}
-			if(!$this->input->post('password'){
+			if(!$this->input->post('password')){
 				echo "password not found";
 			}
 			die("error");
