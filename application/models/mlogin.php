@@ -18,6 +18,17 @@ class Mlogin extends CI_Model {
         $req->closeCursor();
         return $result;
     }
+    
+    function login_membre($u)
+    {
+        $PDO = connectDatabase();
+        $req = $PDO->prepare("SELECT * FROM Spips_killer WHERE email = :email AND password = :password");        
+        $array = array('email' => $u["email"], 'password' => $u["password"]);
+        $req->execute($array) or die(print_r($req->errorInfo()));
+        $result = $req->fetch();
+        $req->closeCursor();
+        return $result;
+    }
 
     /*
 1   id  int(10)     UNSIGNED ZEROFILL   Non Aucune  AUTO_INCREMENT           plus 
