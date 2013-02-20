@@ -25,10 +25,14 @@ class Login extends CI_Controller {
 
 	public function send_login()
 	{
-		if($this->input->post('login') && $this->input->post('password'))
+		if($this->input->post('login') && $this->input->post('password') && preg_match($this->rb_email_regex, $this->input->post('email')))
 		{
-
-
+			$u = array();
+			$u['email'] = htmlentities($this->input->post('email'));
+			$u['password'] = sha1($this->input->post('password')."Bi@tChPlZZZ");
+			$this->load->model('Mlogin');
+			$result = $this->Mlogin->login_membre($u);
+			$this->session->set_userdata('user', $result['id']);
 		}
 
 
