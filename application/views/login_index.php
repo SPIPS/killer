@@ -71,10 +71,10 @@
         <h3 class="muted">KILL€R  -by SPIPS</h3>
       </div>
 
-      <form class="form-signin">
+      <form class="form-signin" method="post" action="<?php echo base_url(); ?>login/send_login">
         <h2 class="form-signin-heading">Connectez-vous, jeune meurtrier...</h2>
-        <input type="text" class="input-block-level" placeholder="adresse e-mail">
-        <input type="password" class="input-block-level" placeholder="mot de passe">
+        <input type="text" class="input-block-level" name="login" placeholder="adresse e-mail">
+        <input type="password" class="input-block-level" name="password" placeholder="mot de passe">
         <!--<label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>-->
