@@ -22,15 +22,9 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('login_index');
 	}
-
-	public function staff()
+	public function inscription()
 	{
-		$this->load->view('welcome_staff');
-	}
-
-	public function rules()
-	{
-		$this->load->view('welcome_rules');
+		$this->load->view('login_inscription');
 	}
 
 	public function send_login()

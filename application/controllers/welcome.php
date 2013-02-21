@@ -21,6 +21,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_index');
 	}
+
+	public function staff()
+	{
+		$this->load->view('welcome_staff');
+	}
+
+	public function rules()
+	{
+		$this->load->view('welcome_rules');
+	}
 }
 
 /* End of file welcome.php */
