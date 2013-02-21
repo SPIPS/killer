@@ -56,6 +56,9 @@ class Login extends CI_Controller {
 			if(!$this->input->post('password')){
 				$app['erreur'][] = "Password non trouvé";
 			}
+			if(!preg_match($this->rb_email_regex, $this->input->post('login'))){
+				$app['erreur'][] = "Votre email doit être de la forme prenom.nom@u-psud.fr";
+			}
 			$this->load->view('error');
 		}
 
