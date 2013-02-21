@@ -22,7 +22,7 @@ class Mlogin extends CI_Model {
     function login_membre($u)
     {
         $PDO = connectDatabase();
-        $req = $PDO->prepare("SELECT * FROM Spips_killer WHERE email = :email AND password = :password");        
+        $req = $PDO->prepare("SELECT * FROM spips_killer WHERE email = :email AND password = :password");        
         $array = array('email' => $u["email"], 'password' => $u["password"]);
         $req->execute($array) or die(print_r($req->errorInfo()));
         $result = $req->fetch();
