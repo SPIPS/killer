@@ -77,8 +77,28 @@
       </div>
 
       <hr>
-
-      to be continued !
+		<h1>Règles du Killer</h1>
+		
+		<p class="lead">
+			Le Killer commence le dimanche 24 février 2013 à 23h59. Le dernier survivant gagne un super cadeau suprise.
+		</p>
+		
+		<p class="lead">
+			Chaque participant a une cible - et une seule - qu'il doit s'évertuer à tuer. Un participant est représenté par un code
+			d'identification à 4 chiffres. Les informations qu'il partage avec les autres assassins sont son nom, son prénom, et sa photo.
+			<br />
+			Pour tuer sa cible, il suffit à l'assassin de s'approcher de celle-ci et de lui dire "KILLER" à l'oreille. 
+			L'assassin doit alors donner à sa cible le code d'identification qui lui correspond pour confirmer l'exactitude du meurtre.
+			La cible doit alors donner sa phrase de confirmation à son meurtrier : l'assassin entrera cette phrase sur le site, et se verra attribuer une nouvelle cible.
+			<br />
+			Attention toutefois, si vous vous faites repérer par un autre joueur vivant lors d'un meurtre, celui-ci peut décider de vous éliminer. Il récupère alors votre
+			code d'identification et votre phrase de confirmation, ainsi que ceux de votre cible. Vous êtes alors éliminés du jeu.
+			<br />
+			A tout moment, vous serez la cible d'un autre assassin, et vous aurez une cible. Personne ne sait qui participe, seulement le nombre de participants.
+			Si vous participez, surtout, gardez le pour vous.
+			<br />
+			Bon courage.
+		</p>
 
       <div class="footer">
         <p>&copy; SPIPS :P 2013</p>
