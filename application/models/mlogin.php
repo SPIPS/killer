@@ -29,6 +29,27 @@ class Mlogin extends CI_Model {
         $req->closeCursor();
         return $result;
     }
+    
+    function get_membre_infos($u)
+    {
+        $PDO = connectDatabase();
+        $req = $PDO->prepare("SELECT * FROM spips_killer WHERE id = :id");        
+        $array = array('id' => $u);
+        $req->execute($array) or die(print_r($req->errorInfo()));
+        $result = $req->fetch();
+        $req->closeCursor();
+        $req = $PDO->prepare("SELECT * FROM spips_killer_dead WHERE id = :id");        
+        $array = array('id' => $u);
+        $req->execute($array) or die(print_r($req->errorInfo()));
+        $result = $req->fetch();
+        $req->closeCursor();
+        $req = $PDO->prepare("SELECT * FROM spips_killer WHERE id = :id");        
+        $array = array('id' => $u);
+        $req->execute($array) or die(print_r($req->errorInfo()));
+        $result = $req->fetch();
+        $req->closeCursor();
+        return $result;
+    }
 
     /*
 1   id  int(10)     UNSIGNED ZEROFILL   Non Aucune  AUTO_INCREMENT           plus 
